@@ -9,26 +9,18 @@ function App() {
       labels: ["11:00", "12:00"],
       datasets: [{
         label: "BTC",
-        data: [4000, 5000]
+        data: [4000, 5000],
+        backgroundColor: 'rgba(238, 175, 0, 0.4)',
+        borderColor: 'rgba(238, 175, 0, 0.5)',
+        pointBorderColor: 'rgba(238, 175, 0, 0.7)'
       }]
     }
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Line 
+        data={data}
+      />
     </div>
   );
 }
