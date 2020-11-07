@@ -1,7 +1,18 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Line } from 'react-chartjs-2';
 
 function App() {
+
+    const data = {
+      labels: ["11:00", "12:00"],
+      datasets: [{
+        label: "BTC",
+        data: [4000, 5000]
+      }]
+    }
+
   return (
     <div className="App">
       <header className="App-header">
