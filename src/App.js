@@ -20,6 +20,8 @@ const fetchData = (time) => {
   // Fetch data from redux using time
 }
 
+const loading = true;
+
   return (
     <div className="App">
       <div className={"btns-wrapper"}>
@@ -27,11 +29,14 @@ const fetchData = (time) => {
         <button onClick={() => fetchData("5min")}>5 Min</button>
         <button onClick={() => fetchData("15min")}>15 Min</button>
 
-        <input onChange={e => setNum(e.target.value)}/>
+        <input onChange={e => setNum(e.target.value)} />
+        {loading && <p>Loading...</p>}
       </div>
-      <Line 
+      <div className={"chart-wrapper"}>
+        <Line 
         data={data}
       />
+      </div>
     </div>
   );
 }
